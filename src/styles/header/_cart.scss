@@ -1,0 +1,206 @@
+@mixin fixed($width, $height) {
+    position: fixed;
+    width: $width;
+    height: $height;
+}
+
+/*=== OVERLAY ===*/
+.overlay {
+    @include fixed(100%, 100%);
+    top: 0;
+    left: 0;
+    background-color: $background-color;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 499;
+    transition: .5s ease-in-out;
+
+    &.visible {
+        visibility: visible;
+        opacity: .6;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+/*=== CART ===*/
+.cart {
+    @include fixed(35%, 100vh);
+    top: 0;
+    right: 0;
+    padding: 3rem 1.5rem;
+    background-color: $white;
+    transform: translateX(150%);
+    z-index: 999;
+    transition: all .7s ease-in-out;
+
+    &.open {
+        transform: translateX(0);
+    }
+
+    &__close {
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    &__container {
+        width: 100%;
+        height: 70%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        @media screen and (max-width: 768px) {
+            height: 50%;
+        }
+    }
+
+    &__product {
+        width: 100%;
+        height: 9rem;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__box {
+        flex: 0 0 30%;
+        height: 100%;
+
+        &-image {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__data {
+        flex: 0 0 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        &-name {
+            font-size: 1.2rem;
+            color: $grey;
+            font-weight: 600;
+
+            @media screen and (max-width: 599px) {
+                font-size: 1rem;
+            }
+        }
+
+        &-price {
+            color: $second-color;
+        }
+
+        @media screen and (max-width: 599px) {
+            flex: 0 0 35%;
+        }
+    }
+
+    &__counter {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: $primary-color;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin: 0 1.5rem;
+
+        &-count {
+            color: $second-color;
+        }
+    }
+
+    &__remove {
+        align-self: start;
+        margin-left: auto;
+        font-size: 1.7rem;
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    &__footer {
+        border-top: 1px solid $background-color;
+        padding-top: 2rem;
+    }
+
+    &__total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-title {
+            font-size: 1.7rem;
+            color: $grey;
+            font-weight: 600;
+        }
+
+        &-amount {
+            font-size: 1.5rem;
+            color: $primary-color;
+        }
+
+        &-count {
+            color: $second-color;
+        }
+    }
+
+    &__clear {
+        margin-top: 1.5rem;
+        width: 100%;
+
+        &-btn {
+            width: 100%;
+            height: 3rem;
+            outline: none;
+            border: .125rem solid $primary-color;
+            background-color: transparent;
+            font-size: 1.4rem;
+            color: $primary-color;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+
+    .no-products {
+        text-align: center;
+        font-size: 3rem;
+        color: $primary-color;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 1199px) {
+        width: 55%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 599px) {
+        padding: 2rem .5rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        padding: 2rem 0;
+    }
+}

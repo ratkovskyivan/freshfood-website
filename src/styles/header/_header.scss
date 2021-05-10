@@ -1,0 +1,108 @@
+@import './cart';
+@import './mob-nav';
+@import './navbar';
+
+/*=== BUTTON TOP ===*/
+.btn-top {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    background-color: $primary-color;
+    color: $white;
+    font-size: 1.5rem;
+    z-index: 99;
+    transition: all .2s ease-in-out;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1rem;
+        bottom: 12%;
+        right: 5%;
+    }
+}
+
+/*=== HEADER ===*/
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/img/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__description {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15%;
+        width: 45%;
+
+        @media screen and (max-width: 768px) {
+            left: 10%;
+            width: 65%;
+        }
+
+        @media screen and (max-width: 599px) {
+            left: 5%;
+            width: 90%;
+        }
+
+        @media screen and (max-width: 320px) {
+            width: 95%;
+        }
+    }
+
+    &__title {
+        color: $primary-color;
+        font-size: calc(46px + 36 * (100vw / (1920 - 320)));
+        font-weight: 600;
+
+        @media screen and (max-width: 768px) {
+            font-size: calc(46px + 16 * (100vw / (1920 - 320)));
+        }
+
+        @media screen and (max-width: 599px) {
+            font-size: calc(46px + 6 * (100vw / (1920 - 320)));
+        }
+
+        @media screen and (max-width: 320px) {
+            font-size: calc(36px + 6 * (100vw / (1920 - 320)));
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 3rem;
+        font-size: calc(13px + 3 * (100vw / (1920 - 320)));
+        color: $grey;
+    }
+
+    &__btn {
+        background-color: $background-color;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        padding: .5rem 3rem;
+        border-radius: 1.5rem;
+        transition: all .5s ease-out;
+
+        &:hover {
+            color: $white;
+            background-color: $primary-color;
+        }
+    }
+}

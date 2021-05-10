@@ -1,0 +1,171 @@
+.food-menu {
+	padding: 10rem 1rem;
+	background-image: url('https://images.unsplash.com/photo-1516211697506-8360dbcfe9a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+    &__wrapper {
+        width: 100%;
+        background-color: $white;
+        padding: 4rem;
+        text-align: center;
+        border-radius: 2rem;
+        box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, .2);
+
+        @media screen and (max-width: 768px) {
+            padding-left: .5rem;
+		    padding-right: .5rem;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: $grey;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    &__subtitle {
+        color: $second-color;
+        margin-bottom: 2rem;
+    }
+
+    &__categories {
+        user-select: none;
+        display: flex;
+        margin-bottom: 3.5rem;
+
+        @media screen and (max-width: 768px) {
+            overflow-y: scroll;
+        }
+    }
+
+    &__box {
+        text-transform: capitalize;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        margin: 0 1rem;
+        border: .125rem solid $primary-color;
+        color: $primary-color;
+        padding: .3rem 2.5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &.active {
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        @media screen and (max-width: 499px) {
+            justify-content: center;
+        }
+    }
+
+    &__product {
+        flex: 0 0 23%;
+        height: 30rem;
+        margin-left: 1.5rem;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        &:nth-child(4n+1) {
+            margin-left: 0;
+        }
+
+        &:hover {
+            box-shadow: 0px 2px 4px 0px rgba(14, 30, 37, .12),
+                        0px 2px 16px 0px rgba(14, 30, 37, .32);
+        }
+
+        @media screen and (max-width: 1199px) {
+            height: 22rem;
+		    margin-left: 1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 23rem;
+            flex: 0 0 48%;
+            margin-left: 1.2rem;
+
+            &:nth-child(2n+1) {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 499px) {
+            height: 18rem;
+            flex: 0 0 80%;
+            margin-left: 0;
+        }
+    }
+
+    &__image {
+        height: 60%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 1.5rem;
+        overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__data {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 3rem;
+    }
+
+    &__text {
+        text-align: left;
+
+        h4 {
+            color: $second-color;
+            font-weight: 600;
+        }
+
+        span {
+            color: $grey;
+        }
+    }
+
+    &__cart {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        color: $primary-color;
+        cursor: pointer;
+        border-radius: .4rem;
+        padding: .3rem .5rem;
+        transition: all .5s ease-out;
+
+        &.active {
+            background-color: $primary-color;
+            color: $white
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 8rem 0;
+    }
+}

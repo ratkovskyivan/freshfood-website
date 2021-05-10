@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Freshfood</title>
+</head>
+<body>
+    <!-- === OVERLAY === -->
+    <div class="overlay"></div>
+    <!-- === CART === -->
+    <div id="cart" class="cart">
+        <div class="cart__close">
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="cart__container">
+            <!-- === render cart === -->
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <p class="cart__total-title">Total</p>
+                <p class="cart__total-amount"> <span class="cart__total-count">0</span> $</p>
+            </div>
+            <div class="cart__clear">
+                <button class="cart__clear-btn">Clear cart</button>
+            </div>
+        </div>
+    </div>
+     <!-- === BUTTON TOP === -->
+     <a href="#home" class="btn-top">
+        <i class='bx bxs-to-top'></i>
+    </a>
+    <!-- === MOBILE-NAV === -->
+    <div class="mob-nav">
+        <div class="mob-nav__move-box"></div>
+        <div class="mob-nav__menu">
+            <ul class="mob-nav__list">
+                <li class="mob-nav__box">
+                    <a href="#home" class="mob-nav__link">
+                        <i class='bx bx-home'></i>
+                    </a>
+                </li>
+                <li class="mob-nav__box">
+                    <a href="#about" class="mob-nav__link">
+                        <i class='bx bx-happy'></i>
+                    </a>
+                </li>
+                <li class="mob-nav__box">
+                    <a href="#food-menu" class="mob-nav__link">
+                        <i class='bx bx-food-menu'></i>
+                    </a>
+                </li>
+                <li class="mob-nav__box">
+                    <a href="#testimonial" class="mob-nav__link">
+                        <i class='bx bx-comment-detail'></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- === HEADER === -->
+    <header id="home" class="header">
+        <!-- === nav === -->
+        <nav class="nav">
+            <a href="#home">
+                <div class="nav__logo">Food</div>
+            </a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active">Home</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#food-menu" class="nav__link">Menu</a></li>
+                    <li><a href="#testimonial" class="nav__link">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="nav__cart">
+                <span class="nav__cart-icon">
+                    <i class='bx bx-cart'></i>
+                </span>
+                <div class="nav__cart-count">0</div>
+            </div>
+        </nav>
+        <!-- === description === -->
+        <div class="header__description">
+            <h1 class="header__title left-to-right _animate-items">Fresh Food</h1>
+            <p class="header__subtitle left-to-right _animate-items delay-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum possimus ad, quaerat expedita, iste autem eos, velit hic aspernatur itaque repudiandae, aut consequuntur atque odit mollitia quibusdam! Illum repellat tenetur at culpa iste eveniet, veritatis.</p>
+            <div class="left-to-right _animate-items delay-4">
+                <a href="#" class="header__btn">Order now</a>
+            </div>
+        </div>
+    </header>
+     <!-- === MAIN === -->
+     <main class="main">
+        <!--  === about === -->
+         <section id="about" class="about">
+             <div class="container">
+                 <div class="about__wrapper">
+                     <div class="about__image left-to-right _animate-items"></div>
+                     <div class="about__description right-to-left _animate-items">
+                         <div class="about__description__wrapper">
+                             <div class="about__title">
+                                 <span>We</span> create <span>delicious</span> memories for <span>you</span>
+                             </div>
+                             <p class="about__subtitle">
+                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates at enim aliquid ipsam porro similique inventore deserunt nemo, iusto excepturi cumque molestias rerum fugiat saepe! Voluptatibus, facere perferendis culpa aliquam ea? Qui necessitatibus, esse ipsa quisquam aspernatur veniam tempore dolorum.
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+         <!-- === food-menu === -->
+         <section id="food-menu" class="food-menu">
+             <div class="container">
+                 <div class="food-menu__wrapper">
+                     <h2 class="food-menu__title">What will <span>you</span> eat today?</h2>
+                     <p class="food-menu__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Aut doloremque, perferendis, quidem ullam temporibus qui sed fugit exercitationem quas rem accusamus ea nobis, delectus illum!</p>
+                     <div class="food-menu__categories">
+                         <!-- === render categories === -->
+                     </div>
+                     <div class="food-menu__container">
+                         <!-- === render menu === -->
+                     </div>
+                 </div>
+             </div>
+         </section>
+         <!-- === testimonial === -->
+         <section id="testimonial" class="testimonial">
+             <div class="container">
+                 <div class="testimonial__wrapper">
+                     <div class="testimonial__card zoom _animate-items">
+                         <p class="testimonial__description">
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam assumenda delectus, facilis quisquam omnis quas soluta, cupiditate laudantium expedita, ex dignissimos accusamus excepturi. Sapiente, atque.
+                         </p>
+                         <div class="testimonial__box">
+                             <img src="./assets/img/testimonials/testimonial-1.jpg" alt="testimonial-1">
+                         </div>
+                         <h3 class="testimonial__name">Sara</h3>
+                         <div class="testimonial__rating" data-total-value="0">
+                             <div class="testimonial__rating-item" data-item-value="5">★</div>
+                             <div class="testimonial__rating-item" data-item-value="4">★</div>
+                             <div class="testimonial__rating-item" data-item-value="3">★</div>
+                             <div class="testimonial__rating-item" data-item-value="2">★</div>
+                             <div class="testimonial__rating-item" data-item-value="1">★</div>
+                         </div>
+                     </div>
+                      <div class="testimonial__card zoom active _animate-items">
+                         <p class="testimonial__description">
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam assumenda delectus, facilis quisquam omnis quas soluta, cupiditate laudantium expedita, ex dignissimos accusamus excepturi. Sapiente, atque.
+                         </p>
+                         <div class="testimonial__box">
+                             <img src="./assets/img/testimonials/testimonial-2.jpg" alt="testimonial-2">
+                         </div>
+                         <h3 class="testimonial__name">Lora</h3>
+                         <div class="testimonial__rating" data-total-value="0">
+                             <div class="testimonial__rating-item" data-item-value="5">★</div>
+                             <div class="testimonial__rating-item" data-item-value="4">★</div>
+                             <div class="testimonial__rating-item" data-item-value="3">★</div>
+                             <div class="testimonial__rating-item" data-item-value="2">★</div>
+                             <div class="testimonial__rating-item" data-item-value="1">★</div>
+                         </div>
+                     </div>
+                      <div class="testimonial__card zoom _animate-items">
+                         <p class="testimonial__description">
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam assumenda delectus, facilis quisquam omnis quas soluta, cupiditate laudantium expedita, ex dignissimos accusamus excepturi. Sapiente, atque.
+                         </p>
+                         <div class="testimonial__box">
+                             <img src="./assets/img/testimonials/testimonial-3.jpg" alt="testimonial-3">
+                         </div>
+                         <h3 class="testimonial__name">David</h3>
+                         <div class="testimonial__rating" data-total-value="0">
+                             <div class="testimonial__rating-item" data-item-value="5">★</div>
+                             <div class="testimonial__rating-item" data-item-value="4">★</div>
+                             <div class="testimonial__rating-item" data-item-value="3">★</div>
+                             <div class="testimonial__rating-item" data-item-value="2">★</div>
+                             <div class="testimonial__rating-item" data-item-value="1">★</div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </main>
+     <!-- === FOOTER === -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__info">
+                    <h3 class="footer__title">Freshfood</h3>
+                    <p class="footer__subtitle">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Incidunt itaque harum excepturi enim! Ullam culpa dolore officiis cumque enim ea iste vitae. Nesciunt, dolores, cum.
+                    </p>
+                    <div class="footer__data">
+                        <p>Email: example@mail.com</p>
+                        <p>Phone: +00 123 456 789</p>
+                    </div>
+                </div>
+                <div class="footer__about">
+                    <h3 class="footer__title">About us</h3>
+                    <ul class="footer__about-list">
+                        <li class="footer__about-link">Our chefs</li>
+                        <li class="footer__about-link">Menu</li>
+                        <li class="footer__about-link">Testimonials</li>
+                        <li class="footer__about-link">Contact</li>
+                    </ul>
+                </div>
+                <div class="footer__subscribe">
+                    <h3 class="footer__title">Subscribe & media</h3>
+                    <p class="footer__subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Reiciendis, porro magni autem aliquid. Magni, deleniti?</p>
+                    <form action="#" class="footer__subscribe-form">
+                        <input type="text" class="footer__subscribe-input" placeholder="Enter your email">
+                        <button type="submit" class="footer__subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+.about {
+	width: 100vw;
+	height: 100vh;
+	background-color: $background-color;
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__image {
+        flex: 0 0 60%;
+        height: 50%;
+        background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 2rem;
+
+        @media screen and (max-width: 768px) {
+            flex: 0 0 10%;
+            height: 100%;
+            border-radius: 0;
+            transform: translateX(0%);
+            background-attachment: fixed;
+        }
+    }
+
+    &__description {
+        position: absolute;
+        top: 50%;
+        transform: translate(150%, -50%);
+        right: 0;
+        width: 60%;
+        background-color: $white;
+        border-radius: 1.5rem;
+        text-align: center;
+        padding: 2rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, .15);
+
+        &._active {
+            transform: translate(0%, -50%);
+
+            @media screen and (max-width: 768px) {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @media screen and (max-width: 768px)  {
+            left: 50%;
+            width: 80%;
+            transition: transform .9s ease 0s;
+        }
+
+        @media screen and (max-width: 499px) {
+            width: 90%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: $grey;
+        font-weight: 600;
+
+        span {
+            color: $primary-color;
+        }
+
+        @media screen and (max-width: 499px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: calc(13px + 3 * (100vw / (1920 - 320)));
+        color: $second-color;
+    }
+}

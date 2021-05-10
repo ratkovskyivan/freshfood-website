@@ -1,0 +1,98 @@
+.footer {
+	padding: 8rem 1rem;
+	background-image: url('https://images.unsplash.com/photo-1484412509196-57eda96981e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        text-align: left;
+        flex: 0 0 40%;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: $primary-color;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+
+        @media screen and (max-width: 768px) {
+            font-size: 2rem;
+		    margin-bottom: .75rem;
+        }
+    }
+
+    &__subtitle {
+        color: $white;
+        font-size: .8rem;
+    }
+
+    &__data {
+        color: $white;
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+
+    &__about {
+        flex: 0 0 10%;
+        text-align: left;
+
+        &-list {
+            list-style: none;
+        }
+        
+        &-link {
+            color: $white;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 2rem;
+		    margin-bottom: 2rem;
+        }
+    }
+
+    &__subscribe {
+        flex: 0 0 40%;
+        text-align-last: left;
+
+        &-form {
+            position: relative;
+            margin-top: 1.5rem;
+        }
+
+        &-input {
+            width: 100%;
+            outline: none;
+            background-color: transparent;
+            border: .125rem solid $primary-color;
+            border-radius: 2rem;
+            padding: 1.25rem .75rem;
+            color: $primary-color;
+        }
+
+        &-btn {
+            position: absolute;
+            top: .75rem;
+            right: 1.5rem;
+            padding: .5rem 1rem;
+            border: none;
+            outline: none;
+            background-color: $primary-color;
+            border-radius: 2rem;
+            color: $white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}
